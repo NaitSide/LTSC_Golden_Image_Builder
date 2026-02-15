@@ -1,0 +1,1 @@
+CreateObject("Wscript.Shell").Run "powershell -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File ""C:\Windows\Setup\Scripts\FirstRun.ps1""", 0, False
