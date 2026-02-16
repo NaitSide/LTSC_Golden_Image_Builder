@@ -1,11 +1,52 @@
-﻿# ============================================================================
-# Clean_and_Sysprep.ps1
-# Подготовка профиля Windows к созданию образа через Sysprep
-# ============================================================================
+﻿# =========================================================
+#    LTSC Golden Image Builder
+#    Clean and Sysprep - Windows Image Preparation
+#    NaitSide Custom Build
+# =========================================================
+#
+#    [!] ВНИМАНИЕ: Запускать ТОЛЬКО в AUDIT MODE!
+#
+#    Этот скрипт подготавливает Windows 10 LTSC к Sysprep:
+#
+#    • Очистка временных файлов и кэша
+#    • Удаление логов и истории
+#    • Оптимизация образа перед запечатыванием
+#    • Запуск Sysprep с OOBE для создания Golden Image
+#
+# =========================================================
+#    GitHub: github.com/NaitSide/LTSC_Golden_Image_Builder
+# =========================================================
 
 # Установка кодировки UTF-8
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-$Host.UI.RawUI.WindowTitle = "Подготовка профиля и запуск Sysprep"
+$Host.UI.RawUI.WindowTitle = "LTSC Golden Image Builder - Clean and Sysprep"
+
+Write-Host ""
+Write-Host "=========================================================" -ForegroundColor Yellow
+Write-Host "   [!]  ВНИМАНИЕ: Запускать ТОЛЬКО в AUDIT MODE!" -ForegroundColor Red
+Write-Host "=========================================================" -ForegroundColor Yellow
+Write-Host ""
+Write-Host "   Этот скрипт:" -ForegroundColor Cyan
+Write-Host "   • Очистит временные файлы и кэш" -ForegroundColor Gray
+Write-Host "   • Удалит логи и историю" -ForegroundColor Gray
+Write-Host "   • Оптимизирует образ" -ForegroundColor Gray
+Write-Host "   • Запустит Sysprep с OOBE" -ForegroundColor Gray
+Write-Host ""
+Write-Host "=========================================================" -ForegroundColor Yellow
+Write-Host ""
+Read-Host "Нажмите Enter для продолжения"
+
+Write-Host ""
+Write-Host "=========================================================" -ForegroundColor Cyan
+Write-Host "   LTSC Golden Image Builder" -ForegroundColor White
+Write-Host "   Clean and Sysprep" -ForegroundColor Gray
+Write-Host "   NaitSide Custom Build" -ForegroundColor Gray
+Write-Host "=========================================================" -ForegroundColor Cyan
+Write-Host ""
+Write-Host "   Начинаю очистку и подготовку системы..." -ForegroundColor Yellow
+Write-Host ""
+Write-Host "=========================================================" -ForegroundColor Cyan
+Write-Host ""
 
 # Путь к скрипту
 $global:scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
