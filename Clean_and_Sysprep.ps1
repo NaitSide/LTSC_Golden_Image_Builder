@@ -548,8 +548,6 @@ do {
             Write-Host "  1. FirstLogon.ps1" -ForegroundColor White
             Write-Host "  2. unattend.xml" -ForegroundColor White
             Write-Host ""
-            Write-Host "Проверить синтаксис FirstLogon.ps1:" -ForegroundColor Yellow
-            Write-Host "  powershell -File `"$xmlFolder\FirstLogon.ps1`" -WhatIf" -ForegroundColor Gray
             Write-Host ""
             pause
         }
